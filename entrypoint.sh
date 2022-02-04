@@ -1,5 +1,5 @@
 #!/bin/sh
-data="${CAF_APP_PERSISTENT_DIR}"
+data="${CAF_APP_PERSISTENT_DIR:-/data}"
 
 grepzt() {
   [ ! -n "$(cat ${data}/zerotier-one.pid)" -a -d "/proc/$(cat ${data}/zerotier-one.pid)" ]
