@@ -1,0 +1,30 @@
+descriptor-schema-version: "2.12"
+
+info:
+  name: "iox_zerotier"
+  description: "ZeroTier IOx container"
+  version: "1.0"
+  author-link: "http://monteops.com"
+  author-name: "Dmitry Galenko"
+
+app:
+  cpuarch: "x86_64"
+  type: "docker"
+  resources:
+    profile: custom
+    cpu: "512"
+    disk: "32"
+    memory: "512"
+    network:
+    - description: "Output interface"
+      interface-name: eth0
+      ipv6_required: false
+      ports:
+        udp:
+        - "9993"
+    - description: "L2 bridge to ZeroTier swarm"
+      interface-name: eth1
+      ipv6_required: false
+  startup:
+    rootfs: rootfs.tar
+    target: ["/entrypoint.sh","changeme"]

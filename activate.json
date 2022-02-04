@@ -1,0 +1,23 @@
+{
+    "resources": {
+        "network": [{
+            "interface-name": "eth0",
+            "network-name": "VPG0",
+            "ipv4": {
+                     "dns":"",
+                     "ip":"172.17.0.2",
+                     "gateway": "172.17.0.1",
+                     "mode": "static",
+                     "prefix": "24"
+            }
+        },
+        {
+            "interface-name": "eth1",
+            "network-name": "VPG1",
+            "ipv4": {
+                     "disabled": true
+            }
+        }
+        ]
+    }
+}
