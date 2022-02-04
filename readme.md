@@ -20,8 +20,17 @@ router ospf 1
 !
 end
 ```
-For join network modify network ID from changeme to real ID in package.yaml.example and rename it to package.yaml
 
+*For join network modify network ID from changeme to real ID in package.yaml.example and rename it to package.yaml*
+
+Build:
+
+```./mkIox.sh```
+
+Deploy/redeploy:
+
+```./redepoy.sh```
 
 Start session inside the container:
+
 ```app-hosting connect appid ZeroTier session```
